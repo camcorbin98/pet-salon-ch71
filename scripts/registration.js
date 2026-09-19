@@ -19,6 +19,16 @@ let pet3 = {
     service:true,
     breed:"german shepard",
 };
+function Pet(name, age, breed, gender, service){
+    this.name = name;
+    this.age = age;
+    this.breed = breed;
+    this.gender = gender;
+    this.service = service;
+}
+let pet4 = new Pet("Flapjack", 7, "bulldog", "male", true);
+let pet5 = new Pet("Tom", 7, "pitbull", "male", false);
+let pet6 = new Pet("Rocko", 2, "bullterrier", "female", true);
 function displayPets(){
     let petList=document.getElementById("petList");
 

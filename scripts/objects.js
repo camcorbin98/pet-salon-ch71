@@ -71,3 +71,15 @@ console.log(`${product.name} is manugactured by ${product.company} in ${product.
 console.log(`${product1.state} manufactures ${product1.company} ${product1.name} for the military`);
 console.log(`${product2.company} produces ${product2.name} in ${product2.state}`);
 
+
+// ===== OBJECT CONSTRUCTOR ===
+function Student(name, lastname, age, isStudent){
+    this.name = name;
+    this.lastname = lastname;
+    this.age = age;
+    this.isStudent = isStudent;
+}
+
+let student = new Student("Fernanda", "Murillo", 34, false);
+console.log(student);
+

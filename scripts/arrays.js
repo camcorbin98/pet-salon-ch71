@@ -65,3 +65,30 @@ console.log(studentsList[1].age);
 
 console.log(`Hey, this is ${studentsList[0].name} and I am ${studentsList[0].age} years old`);
 
+
+let gameList = [
+
+    {
+        title:"Revenge of the Space Monsters",
+        platform:"PS5",
+        releaseYear:2025,
+    },
+
+
+    {
+        title:"Call of Judy",
+        platform:"XBOX",
+        releaseYear:2024,
+    },
+
+    {
+        title:"Grand Theft Redemption",
+        platform:"PC",
+        releaseYear:2022,
+    },
+];
+
+console.log(gameList[0].title);
+console.log(gameList[1].platform);
+console.log(`${gameList[2].title} was released on ${gameList[2].platform} in ${gameList[2].releaseYear}.`);
+console.log(gameList.length);
