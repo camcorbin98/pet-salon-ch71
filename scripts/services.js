@@ -6,13 +6,17 @@ function Service(name, description, price){
 }
 
 
+// Array to store services
+let services = JSON.parse(localStorage.getItem("services")) || [];
+
+
 // When the service form is submitted
 $("#serviceForm").submit(function(event){
 
     // Prevent the page from refreshing
     event.preventDefault();
 
-    // Get the values from the form
+    // Get values from the form
     let name = $("#serviceName").val();
     let description = $("#serviceDescription").val();
     let price = $("#servicePrice").val();
@@ -21,7 +25,7 @@ $("#serviceForm").submit(function(event){
     let isValid = true;
 
 
-    // Check the service name
+    // Validate service name
     if(name == ""){
         $("#serviceName").css("border", "2px solid red");
         isValid = false;
@@ -30,7 +34,7 @@ $("#serviceForm").submit(function(event){
     }
 
 
-    // Check the service description
+    // Validate description
     if(description == ""){
         $("#serviceDescription").css("border", "2px solid red");
         isValid = false;
@@ -39,7 +43,7 @@ $("#serviceForm").submit(function(event){
     }
 
 
-    // Check the service price
+    // Validate price
     if(price == ""){
         $("#servicePrice").css("border", "2px solid red");
         isValid = false;
@@ -48,19 +52,26 @@ $("#serviceForm").submit(function(event){
     }
 
 
-    // If all fields are filled out
+    // If everything is valid
     if(isValid){
 
-        // Create a new Service object
+        // Create the Service object
         let newService = new Service(name, description, price);
 
-        // Display the object in the console
+        // Add service to the array
+        services.push(newService);
+
+        // Save services to localStorage
+        localStorage.setItem("services", JSON.stringify(services));
+
+        // Display in console
         console.log(newService);
+        console.log(services);
 
         // Clear the form
         $("#serviceForm")[0].reset();
 
-        // Remove all red borders
+        // Remove red borders
         $(".form-control").css("border", "");
     }
 
