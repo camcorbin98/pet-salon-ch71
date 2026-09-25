@@ -7,26 +7,97 @@
     <title>Services</title>
 </head>
 <body>
-       <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Pet Salon</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="services.htnml">Services</a>
-        </li>
-       <li class="nav-item">
-          <a class="nav-link" href="registration.html">Registration</a>
-       
+  
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  
+    <div class="container-fluid">
+      
+      <a class="navbar-brand" href="index.html">Pet Salon</a>
+    
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      
+        <span class="navbar-toggler-icon"></span>
+    
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="registration.html">Registration</a>
+          </li>
+        </ul>
+      </div>
     </div>
- 
+  </nav>
+
+  <main class="container mt-4">
+    
     <h1>Services</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <form id="serviceForm" class="mt-3">
+
+      <div class="mb-3">
+        <label for="serviceName" class="form-label">
+          Service
+        </label>
+
+        <input
+          type="text"
+          class="form-control"
+          id="serviceName"
+          placeholder="Bath Basic"
+        >
+      </div>
+
+      <div>
+
+        <label for="serviceDescription" class="form-label">
+          Description
+        </label>
+
+        <input
+          type="text"
+          class="form-control"
+          id="serviceDescription"
+          placeholder="Includes shampoo & towel dry"
+        >
+      </div>
+
+      <div class="mb-3">
+
+        <label for="servicePrice" class="form-label">
+          Price
+        </label>
+
+        <input
+          type="number"
+          class="form-control"
+          id="servicePrice"
+          placeholder="10.00"
+        >
+      </div>
+
+      <button type="submit" class="btn btn-primary">
+        Register
+      </button>
+
+      <button type="reset" class="btn btn-secondary">
+        Cancel
+      </button>
+    </form>
+  </main>
+  
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="scripts/services.js"></script>
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
