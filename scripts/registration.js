@@ -92,3 +92,22 @@ displayRow(pet3);
 displayRow(pet4);
 displayRow(pet5);
 displayRow(pet6);
+
+
+$("#darkModeBtn").click(function(){
+
+    $("body").toggleClass("dark-mode");
+
+    if($("body").hasClass("dark-mode")){
+
+        $("#darkModeBtn").text("Light Mode ☀️");
+        $("#darkModeBtn").removeClass("btn-dark").addClass("btn-light");
+
+    }else{
+
+        $("#darkModeBtn").text("Dark Mode 🌙");
+        $("#darkModeBtn").removeClass("btn-light").addClass("btn-dark");
+
+    }
+
+});

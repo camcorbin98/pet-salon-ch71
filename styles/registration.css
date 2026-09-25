@@ -90,3 +90,74 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(63, 52, 43, 0.15);
 }
+
+/* Dark Mode */
+
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+/* Navbar */
+
+.dark-mode .navbar {
+    background-color: #2b2b2b !important;
+}
+
+.dark-mode .navbar-brand,
+.dark-mode .nav-link {
+    color: white;
+}
+
+.dark-mode .nav-link:hover {
+    color: #d8c3a5;
+}
+
+/* Registration Section */
+
+.dark-mode .registration-section {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode .registration-section h1 {
+    color: #e0b4a8;
+}
+
+.dark-mode .registration-section h2 {
+    color: #d8c3a5;
+}
+
+/* Pet List */
+
+.dark-mode #petList li {
+    background-color: #444;
+    color: white;
+    border-left-color: #d08a78;
+}
+
+/* Registration Form */
+
+.dark-mode form {
+    background-color: #333 !important;
+    color: white;
+}
+
+.dark-mode .form-control,
+.dark-mode .form-select {
+    background-color: #444;
+    color: white;
+    border-color: #666;
+}
+
+.dark-mode .form-control::placeholder {
+    color: #bbb;
+}
+
+/* Registered Pets Table */
+
+.dark-mode .table {
+    --bs-table-bg: #333;
+    --bs-table-color: white;
+    --bs-table-border-color: #666;
+}
