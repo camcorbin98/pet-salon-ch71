@@ -1,140 +1,529 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/registration.css">
-    <title>Registration</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="styles/registration.css"
+    >
+
+    <title>Pet Registration | Sonoran Luxury Pet Spa</title>
 </head>
+
+
 <body>
 
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      
-      <a class="navbar-brand" href="index.html">Pet Salon</a>
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link" href="services.html">Services</a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link" href="registration.html">Registration</a>
-          </li>
+    <!-- ================================
+         Navigation
+         ================================ -->
 
-          <li class="nav-item">
-            <button id="darkModeBtn" class="btn btn-dark">
-              Dark Mode 🌙
+    <nav class="navbar navbar-expand-lg">
+
+        <div class="container">
+
+            <a
+                class="navbar-brand"
+                href="index.html"
+            >
+                Sonoran Luxury Pet Spa
+            </a>
+
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
             </button>
-          </li>
-        
-        
-        </ul>
-      
-      
-      </div>
-    
-    
+
+
+            <div
+                class="collapse navbar-collapse"
+                id="navbarSupportedContent"
+            >
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">
+                            Services
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link active"
+                            href="registration.html"
+                        >
+                            Registration
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">
+                            Gallery
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            About the Owner
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+
+                        <button
+                            id="darkModeBtn"
+                            class="btn btn-dark"
+                        >
+                            Dark Mode 🌙
+                        </button>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================================
+         Top Desktop Side Images
+         ================================ -->
+
+
+    <!-- Prairie Dog - Left -->
+
+    <div class="desktop-side-image left-side-image">
+
+        <img
+            src="images/prariedog1.jpg"
+            alt="Prairie dog at Sonoran Luxury Pet Spa"
+        >
+
     </div>
-  
-  </nav>
-  
-  
-  
-  <section class="registration-section">
-    <h1>Registration</h1>
 
-    <h2>Registered Pets</h2>
-    
-    
-    <div id="petList"></div>
-  
-  </section>
-  <section>
-    
-    <h1>Registration</h1>
-    
-    <form class="bg-light p-4 m-3 border rounded">
-        
-      <div class="mb-3">
-          <label for="petName" class="form-label">Name</label>
-          <input type="text" class="form-control" id="petName" placeholder="Dobby">
+
+    <!-- Donkey - Right -->
+
+    <div class="desktop-side-image right-side-image">
+
+        <img
+            src="images/donkey1.jpg"
+            alt="Donkey at Sonoran Luxury Pet Spa"
+        >
+
+    </div>
+
+
+
+    <!-- ================================
+         Bottom Desktop Side Images
+         ================================ -->
+
+
+    <!-- Dolphin - Left -->
+
+    <div class="desktop-side-image left-bottom-image">
+
+        <img
+            src="images/dolphin1.jpg"
+            alt="Dolphin at Sonoran Luxury Pet Spa"
+        >
+
+    </div>
+
+
+    <!-- Cougar - Right -->
+
+    <div class="desktop-side-image right-bottom-image">
+
+        <img
+            src="images/cougar1.jpg"
+            alt="Cougar at Sonoran Luxury Pet Spa"
+        >
+
+    </div>
+
+
+
+    <!-- ================================
+         Registration Section
+         ================================ -->
+
+    <main class="registration-section">
+
+
+        <!-- ================================
+             Registration Intro
+             ================================ -->
+
+        <div class="registration-intro">
+
+
+            <!-- Intro Text -->
+
+            <div class="registration-intro-text">
+
+                <p class="section-label">
+                    SONORAN PET CARE
+                </p>
+
+                <h1>
+                    Pet Registration
+                </h1>
+
+                <p>
+                    Tell us a little about your companion and select
+                    the spa experience that's right for them.
+                </p>
+
+            </div>
+
+
+            <!-- Intro Image -->
+
+            <div class="registration-intro-image">
+
+                <img
+                    src="images/dog7.jpg"
+                    alt="Dog at Sonoran Luxury Pet Spa"
+                >
+
+            </div>
+
+
         </div>
 
-        <div class="mb-3">
-            <label for="petAge" class="form-label">Age</label>
-            <input type="number" class="form-control" id="petAge" placeholder="7">
+
+
+        <!-- ================================
+             Original Registered Pets
+             ================================ -->
+
+        <section class="original-pets">
+
+            <h2>
+                Registered Pets
+            </h2>
+
+            <div id="petList"></div>
+
+        </section>
+
+
+
+        <!-- ================================
+             Pet Registration Form
+             ================================ -->
+
+        <section class="pet-registration-form">
+
+            <h2>
+                Register Your Pet
+            </h2>
+
+
+            <form>
+
+
+                <!-- Pet Name -->
+
+                <div class="mb-3">
+
+                    <label
+                        for="petName"
+                        class="form-label"
+                    >
+                        Pet Name
+                    </label>
+
+                    <input
+                        id="petName"
+                        class="form-control"
+                        type="text"
+                        placeholder="Dobby"
+                    >
+
+                </div>
+
+
+
+                <!-- Pet Age -->
+
+                <div class="mb-3">
+
+                    <label
+                        for="petAge"
+                        class="form-label"
+                    >
+                        Age
+                    </label>
+
+                    <input
+                        id="petAge"
+                        class="form-control"
+                        type="number"
+                        placeholder="4"
+                    >
+
+                </div>
+
+
+
+                <!-- Breed -->
+
+                <div class="mb-3">
+
+                    <label
+                        for="petBreed"
+                        class="form-label"
+                    >
+                        Breed
+                    </label>
+
+                    <input
+                        id="petBreed"
+                        class="form-control"
+                        type="text"
+                        placeholder="Terrier"
+                    >
+
+                </div>
+
+
+
+                <!-- Gender -->
+
+                <div class="mb-3">
+
+                    <label
+                        for="petGender"
+                        class="form-label"
+                    >
+                        Gender
+                    </label>
+
+                    <select
+                        id="petGender"
+                        class="form-select"
+                    >
+
+                        <option value="">
+                            Select Gender
+                        </option>
+
+                        <option value="male">
+                            Male
+                        </option>
+
+                        <option value="female">
+                            Female
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- Service -->
+
+                <div class="mb-4">
+
+                    <label
+                        for="petService"
+                        class="form-label"
+                    >
+                        Service
+                    </label>
+
+                    <select
+                        id="petService"
+                        class="form-select"
+                    >
+
+                        <option value="">
+                            Select Service
+                        </option>
+
+                        <option value="true">
+                            Yes
+                        </option>
+
+                        <option value="false">
+                            No
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- Buttons -->
+
+                <div class="d-flex gap-3">
+
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        onclick="registerPet(event)"
+                    >
+                        Register Pet
+                    </button>
+
+
+                    <button
+                        type="reset"
+                        class="btn btn-secondary"
+                    >
+                        Reset
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </section>
+
+
+
+        <!-- ================================
+             All Registered Pets
+             ================================ -->
+
+        <section class="registered-pets-table">
+
+            <h2>
+                Pet Registration List
+            </h2>
+
+
+            <div class="table-responsive">
+
+                <table class="table table-bordered table-hover">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Name</th>
+
+                            <th>Age</th>
+
+                            <th>Breed</th>
+
+                            <th>Gender</th>
+
+                            <th>Service</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="petTableBody">
+
+                    </tbody>
+
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <!-- ================================
+     Animal Quote
+     ================================ -->
+
+<section class="animal-quote">
+
+    <p>
+        “If you're ever feeling down, love an animal.”
+    </p>
+
+    <span>
+        — Abraham Lincoln
+    </span>
+
+</section>
+
+
+
+    <!-- ================================
+         Footer
+         ================================ -->
+
+    <footer>
+
+        <div class="container">
+
+            <h3>
+                Sonoran Luxury Pet Spa
+            </h3>
+
+            <p>
+                Scottsdale, Arizona
+            </p>
+
+            <p class="copyright">
+                &copy; 2026 Sonoran Luxury Pet Spa
+            </p>
+
         </div>
 
-        <div class="mb-3">
-            <label for="petBreed" class="form-label">Breed</label>
-            <input type="text" class="form-control" id="petBreed" placeholder="Terrier">
-        </div>
+    </footer>
 
-        <div class="mb-3">
-            <label for="petGender" class="form-label">Gender</label>
-            <input type="text" class="form-control" id="petGender" placeholder="Email" aria-label="email" aria-describedy="basic-addon4">
-        </div>
 
-        <div class="mb-3">
-            <label for="petService" class="form-label">Service</label>
-            <select class="form-select" id="petService">
-              <option value="">Select a service</option>
-              <option value="Wash">Wash</option>
-              <option value="Hair Cut">Hair Cut</option>
-              <option value="Nail Clipping">Nail Clipping</option>
-              <option value="Complete Experience">Complete Experience</option>
-            </select>
-        
-        </div>
 
-        <div class="d-flex justify-content-end gap-3">
-          <button onclick="registerPet(event)" class="btn btn-primary" type="submit">
-            Register 
-          </button>
+    <!-- ================================
+         Scripts
+         ================================ -->
 
-          <button class="btn btn-secondary" type="reset">
-            Reset
-          </button>
-        </div>
-        
-    </form>
-  </section>
-  <section>
-    <h2>Registered Pets</h2>
-    <table class="table table-striped table-bordered">
-        <!----Header-->
-      <tr>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Gender</th>
-          <th>Email</th>
-          <th>Class</th>
-      </tr>
-        <!--Body-->
-      <tbody id="petTableBody">
-      </tbody>
-    </table>
-  </section>
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  
-  <script src="./scripts/registration.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="scripts/registration.js"></script>
+
 
 </body>
+
 </html>

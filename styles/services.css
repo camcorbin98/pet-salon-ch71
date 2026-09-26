@@ -1,64 +1,1027 @@
-/*body*/
+/* ================================
+   Sonoran Luxury Pet Spa
+   Services Page
+   ================================ */
+
+
+/* ================================
+   Page
+   ================================ */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    background-color: #f4eee5;
-    color: #3f342b;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #d8d8d8;
+    color: #2f2f2f;
+
     font-family: "Segoe UI", Arial, sans-serif;
-    line-height:1.6;
+    line-height: 1.6;
 }
-/*nav*/
+
+
+/* ================================
+   Navigation
+   ================================ */
+
 .navbar {
-    background-color:#d8c3a5 !important;
+    background-color: #c7c7c7;
 
-    box-shadow: 0 2px 10px rgba(63, 52, 43, 0.12);
+    padding: 18px 0;
 
+    border-bottom: 1px solid #adadad;
+
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
 .navbar-brand {
-    color: #3f342b;
+    color: #2f2f2f;
+
     font-family: Georgia, serif;
-    font-size: 1.5rem;
-    font-weight:bold;
+    font-size: 1.4rem;
+    font-weight: bold;
+
     letter-spacing: 1px;
 }
 
 .nav-link {
-    color: #3f342b;
+    color: #3f3f3f;
+
     font-weight: 500;
-    transition: color 0.2s ease;
+
+    margin-left: 20px;
 }
 
 .nav-link:hover {
-    color:#7b4033;
-}
-
-/*Services*/
-.services-section {
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 50px;
-    background-color: #fffdf8;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(63, 52, 43, 0.12);
-}
-
-.services-section h1 {
-    margin-bottom: 30px;
     color: #7b4033;
-    font-family: Georgia, serif;
-    font-size: 2.8rem;
-    letter-spacing: 1px;
-    text-align: center; 
 }
 
-/*Form*/
-#serviceForm {
-    max-width: 650px;
+.nav-link.active {
+    color: #7b4033 !important;
+
+    font-weight: 700;
+}
+
+#darkModeBtn {
+    white-space: nowrap;
+}
+
+
+/* ================================
+   Services Hero
+   ================================ */
+
+.services-hero {
+    padding: 80px 20px;
+
+    background-color: #d8d8d8;
+}
+
+.services-hero-layout {
+    display: grid;
+
+    grid-template-columns: 1fr 1.3fr 1fr;
+
+    align-items: center;
+
+    gap: 45px;
+}
+
+
+/* ================================
+   Hero Images
+   ================================ */
+
+.services-hero-image {
+    width: 100%;
+    height: 340px;
+
+    overflow: hidden;
+
+    border: 3px solid #2f2f2f;
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.16);
+}
+
+.services-hero-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* ================================
+   Hero Center Text
+   ================================ */
+
+.services-hero-content {
+    text-align: center;
+}
+
+.section-label {
+    margin-bottom: 12px;
+
+    color: #8f4f43;
+
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.services-hero-content h1 {
+    margin: 0 0 20px;
+
+    color: #2f2f2f;
+
+    font-family: Georgia, serif;
+    font-size: 3.5rem;
+}
+
+.services-hero-content p:last-child {
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    color: #555555;
+
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+
+/* ================================
+   Featured Services
+   ================================ */
+
+.services-section {
+    padding: 30px 20px 100px;
+
+    background-color: #d8d8d8;
+}
+
+.services-title {
+    margin-bottom: 50px;
+
+    color: #7b4033;
+
+    font-family: Georgia, serif;
+    font-size: 2.5rem;
+
+    text-align: center;
+}
+
+.service-card {
+    height: 100%;
+
+    padding: 40px 25px;
+
+    background: linear-gradient(
+        145deg,
+        #eeeeee,
+        #c6c6c6
+    );
+
+    border: 2px solid #2f2f2f;
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.10);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.16);
+}
+
+.service-icon {
+    margin-bottom: 20px;
+
+    font-size: 2.5rem;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+
+    color: #7b4033;
+
+    font-family: Georgia, serif;
+    font-size: 1.6rem;
+}
+
+.service-card p {
+    margin-bottom: 0;
+
+    color: #555555;
+}
+
+
+/* ================================
+   Add a Service Section
+   ================================ */
+
+.service-form-section {
+    padding: 90px 20px;
+
+    background-color: #c7c7c7;
+}
+
+
+/* ================================
+   Add a Service Layout
+   ================================ */
+
+.add-service-layout {
+    width: 100%;
+    max-width: 700px;
+
     margin: 0 auto;
 }
 
-#serviceForm.form-label {
-    color: #3f342b;
+
+/* Side images are hidden by default */
+
+.add-service-side-image {
+    display: none;
+}
+
+
+/* ================================
+   Add a Service Card
+   ================================ */
+
+.service-form-card {
+    width: 100%;
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    padding: 50px;
+
+    background: linear-gradient(
+        145deg,
+        #eeeeee,
+        #c6c6c6
+    );
+
+    border: 3px solid black;
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.13);
+}
+
+.service-form-card h2 {
+    margin-bottom: 10px;
+
+    color: #7b4033;
+
+    font-family: Georgia, serif;
+    font-size: 2.5rem;
+}
+
+.form-description {
+    margin-bottom: 35px;
+
+    color: #555555;
+}
+
+.form-label {
+    color: #3f3f3f;
+
     font-weight: 600;
-    
+}
+
+.form-control {
+    padding: 12px 15px;
+
+    background-color: #eeeeee;
+    color: #2f2f2f;
+
+    border: 1px solid #999999;
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    background-color: #f5f5f5;
+    color: #2f2f2f;
+
+    border-color: #7b4033;
+
+    box-shadow:
+        0 0 0 0.2rem rgba(123, 64, 51, 0.15);
+}
+
+.form-control::placeholder {
+    color: #888888;
+}
+
+
+/* ================================
+   Remove Price Input Arrows
+   ================================ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+
+    margin: 0;
+}
+
+input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+
+/* ================================
+   Add Service Button
+   ================================ */
+
+.register-service-btn {
+    padding: 12px 25px;
+
+    background-color: #7b4033;
+    color: white;
+
+    border: none;
+
+    font-weight: 600;
+}
+
+.register-service-btn:hover {
+    background-color: #603128;
+    color: white;
+}
+
+
+/* ================================
+   Registered Services Section
+   ================================ */
+
+.registered-services-section {
+    flex: 1;
+
+    padding: 90px 20px 100px;
+
+    background-color: #d8d8d8;
+}
+
+
+/* ================================
+   Registered Services Layout
+   ================================ */
+
+.registered-services-layout {
+    display: grid;
+
+    grid-template-columns: 1fr 1.3fr 1fr;
+
+    align-items: center;
+
+    gap: 45px;
+
+    margin-bottom: 60px;
+}
+
+
+/* ================================
+   Registered Services Images
+   ================================ */
+
+.registered-services-image {
+    width: 100%;
+    height: 340px;
+
+    overflow: hidden;
+
+    border: 3px solid #2f2f2f;
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.16);
+}
+
+.registered-services-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* ================================
+   Registered Services Heading
+   ================================ */
+
+.registered-services-heading {
+    text-align: center;
+}
+
+.registered-title {
+    margin: 0;
+
+    color: #7b4033;
+
+    font-family: Georgia, serif;
+    font-size: 2.5rem;
+
+    text-align: center;
+}
+
+
+/* ================================
+   JavaScript Service List
+   ================================ */
+
+#serviceList {
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+/* ================================
+   Registered Service Cards
+   ================================ */
+
+.registered-service {
+    margin-bottom: 20px;
+
+    padding: 25px 30px;
+
+    background: linear-gradient(
+        145deg,
+        #eeeeee,
+        #c6c6c6
+    );
+
+    border: 2px solid #2f2f2f;
+    border-radius: 15px;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.10);
+}
+
+.registered-service h3 {
+    color: #7b4033;
+
+    font-family: Georgia, serif;
+}
+
+.registered-service p {
+    margin-bottom: 8px;
+
+    color: #555555;
+}
+
+
+/* ================================
+   Delete Button
+   ================================ */
+
+.delete-service-btn {
+    margin-top: 10px;
+
+    padding: 8px 16px;
+
+    background-color: #b02a37;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+}
+
+.delete-service-btn:hover {
+    background-color: #8b1e29;
+    color: white;
+}
+
+
+/* ================================
+   Footer
+   ================================ */
+
+footer {
+    margin-top: auto;
+
+    padding: 50px 20px;
+
+    background-color: #303030;
+    color: #dedede;
+
+    text-align: center;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+
+    font-family: Georgia, serif;
+    font-size: 1.5rem;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+.copyright {
+    margin-top: 20px;
+
+    color: #aaaaaa;
+
+    font-size: 0.85rem;
+}
+
+
+/* ================================
+   Dark Mode
+   ================================ */
+
+body.dark-mode {
+    background-color: #181818;
+
+    color: #e1e1e1;
+}
+
+.dark-mode .navbar {
+    background-color: #242424;
+
+    border-bottom-color: #444444;
+}
+
+.dark-mode .navbar-brand,
+.dark-mode .nav-link {
+    color: #dddddd;
+}
+
+.dark-mode .nav-link.active {
+    color: #d08a78 !important;
+}
+
+.dark-mode .nav-link:hover {
+    color: #e0b4a8;
+}
+
+
+/* ================================
+   Dark Mode Hero
+   ================================ */
+
+.dark-mode .services-hero {
+    background-color: #181818;
+}
+
+.dark-mode .services-hero-content h1 {
+    color: #eeeeee;
+}
+
+.dark-mode .services-hero-content p:last-child {
+    color: #bbbbbb;
+}
+
+.dark-mode .services-hero-content .section-label {
+    color: #d08a78;
+}
+
+.dark-mode .services-hero-image {
+    border-color: black;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.40);
+}
+
+
+/* ================================
+   Dark Mode Featured Services
+   ================================ */
+
+.dark-mode .services-section {
+    background-color: #181818;
+}
+
+.dark-mode .services-title {
+    color: #e0b4a8;
+}
+
+.dark-mode .service-card {
+    background: linear-gradient(
+        145deg,
+        #383838,
+        #292929
+    );
+
+    border-color: black;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.dark-mode .service-card h3 {
+    color: #e0b4a8;
+}
+
+.dark-mode .service-card p {
+    color: #cccccc;
+}
+
+
+/* ================================
+   Dark Mode Service Form
+   ================================ */
+
+.dark-mode .service-form-section {
+    background-color: #202020;
+}
+
+.dark-mode .service-form-card {
+    background: linear-gradient(
+        145deg,
+        #383838,
+        #292929
+    );
+
+    border-color: black;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.30);
+}
+
+.dark-mode .service-form-card h2 {
+    color: #e0b4a8;
+}
+
+.dark-mode .form-description {
+    color: #cccccc;
+}
+
+.dark-mode .form-label {
+    color: #dddddd;
+}
+
+.dark-mode .form-control {
+    background-color: #202020;
+    color: #eeeeee;
+
+    border-color: #555555;
+}
+
+.dark-mode .form-control:focus {
+    background-color: #202020;
+    color: #eeeeee;
+
+    border-color: #d08a78;
+
+    box-shadow:
+        0 0 0 0.2rem rgba(208, 138, 120, 0.15);
+}
+
+.dark-mode .form-control::placeholder {
+    color: #888888;
+}
+
+.dark-mode .register-service-btn {
+    background-color: #a65d4e;
+}
+
+.dark-mode .register-service-btn:hover {
+    background-color: #b96f5f;
+}
+
+
+/* ================================
+   Dark Mode Add Service Side Images
+   ================================ */
+
+.dark-mode .add-service-side-image {
+    border-color: black;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.45);
+}
+
+
+/* ================================
+   Dark Mode Registered Services
+   ================================ */
+
+.dark-mode .registered-services-section {
+    background-color: #181818;
+}
+
+.dark-mode .registered-title {
+    color: #e0b4a8;
+}
+
+.dark-mode .registered-services-image {
+    border-color: black;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.40);
+}
+
+.dark-mode .registered-service {
+    background: linear-gradient(
+        145deg,
+        #383838,
+        #292929
+    );
+
+    border-color: black;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.dark-mode .registered-service h3 {
+    color: #e0b4a8;
+}
+
+.dark-mode .registered-service p {
+    color: #cccccc;
+}
+
+
+/* ================================
+   Full Screen Desktop
+   Snake + Form + Lizard
+   ================================ */
+
+@media (min-width: 1901px) {
+
+    .service-form-section {
+        padding: 100px 20px;
+    }
+
+    .add-service-layout {
+        max-width: 1850px;
+
+        display: grid;
+
+        grid-template-columns: 430px 700px 430px;
+
+        justify-content: center;
+        align-items: stretch;
+
+        gap: 55px;
+    }
+
+    .add-service-side-image {
+        display: block;
+
+        width: 430px;
+        height: 650px;
+
+        overflow: hidden;
+
+        border: 3px solid #2f2f2f;
+        border-radius: 22px;
+
+        box-shadow:
+            0 15px 35px rgba(0, 0, 0, 0.20);
+    }
+
+    .add-service-side-image img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .service-form-card {
+        width: 700px;
+        max-width: 700px;
+
+        min-height: 650px;
+
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+/* ================================
+   Tablet
+   ================================ */
+
+@media (max-width: 991px) {
+
+    /* Top Hero */
+
+    .services-hero {
+        padding: 70px 20px;
+    }
+
+    .services-hero-layout {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 30px;
+    }
+
+    .services-hero-content {
+        grid-column: 1 / 3;
+        grid-row: 1;
+
+        margin-bottom: 15px;
+    }
+
+    .services-hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .services-hero-image {
+        height: 350px;
+    }
+
+
+    /* Featured Services */
+
+    .services-section {
+        padding: 30px 20px 70px;
+    }
+
+
+    /* Add Service */
+
+    .service-form-section {
+        padding: 70px 20px;
+    }
+
+
+    /* Registered Services */
+
+    .registered-services-section {
+        padding: 70px 20px;
+    }
+
+    .registered-services-layout {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 30px;
+    }
+
+    .registered-services-heading {
+        grid-column: 1 / 3;
+        grid-row: 1;
+
+        margin-bottom: 15px;
+    }
+
+    .registered-services-image {
+        height: 350px;
+    }
+
+
+    /* Navigation */
+
+    .nav-link {
+        margin-left: 0;
+    }
+
+    #darkModeBtn {
+        margin-top: 10px;
+    }
+}
+
+
+/* ================================
+   Phones
+   ================================ */
+
+@media (max-width: 576px) {
+
+    /* Top Hero */
+
+    .services-hero {
+        padding: 55px 15px;
+    }
+
+    .services-hero-layout {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+    .services-hero-content {
+        order: 1;
+    }
+
+    .services-hero-image {
+        width: 100%;
+        height: 350px;
+    }
+
+    .services-hero-image:first-child {
+        order: 2;
+    }
+
+    .services-hero-image:last-child {
+        order: 3;
+    }
+
+    .services-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .services-hero-content p:last-child {
+        font-size: 1rem;
+    }
+
+
+    /* Featured Services */
+
+    .services-title {
+        font-size: 2rem;
+    }
+
+    .service-card {
+        padding: 30px 20px;
+    }
+
+
+    /* Add Service */
+
+    .service-form-section {
+        padding: 60px 15px;
+    }
+
+    .service-form-card {
+        padding: 35px 25px;
+    }
+
+    .service-form-card h2 {
+        font-size: 2rem;
+    }
+
+
+    /* Registered Services */
+
+    .registered-services-section {
+        padding: 60px 15px;
+    }
+
+    .registered-services-layout {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+    .registered-services-heading {
+        order: 1;
+    }
+
+    .registered-services-image {
+        width: 100%;
+        height: 350px;
+    }
+
+    .registered-services-image:first-child {
+        order: 2;
+    }
+
+    .registered-services-image:last-child {
+        order: 3;
+    }
+
+    .registered-title {
+        font-size: 2rem;
+    }
+
+    .registered-service {
+        padding: 20px;
+    }
 }

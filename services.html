@@ -1,103 +1,618 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <title>Services</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+
+    <!-- Bootstrap -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- Services CSS -->
+
+    <link
+        rel="stylesheet"
+        href="styles/services.css"
+    >
+
+
+    <title>
+        Services | Sonoran Luxury Pet Spa
+    </title>
+
 </head>
+
+
 <body>
-  
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  
-    <div class="container-fluid">
-      
-      <a class="navbar-brand" href="index.html">Pet Salon</a>
-    
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      
-        <span class="navbar-toggler-icon"></span>
-    
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="services.html">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="registration.html">Registration</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <main class="container mt-4">
-    
-    <h1>Services</h1>
-
-    <form id="serviceForm" class="mt-3">
-
-      <div class="mb-3">
-        <label for="serviceName" class="form-label">
-          Service
-        </label>
-
-        <input
-          type="text"
-          class="form-control"
-          id="serviceName"
-          placeholder="Bath Basic"
-        >
-      </div>
-
-      <div>
-
-        <label for="serviceDescription" class="form-label">
-          Description
-        </label>
-
-        <input
-          type="text"
-          class="form-control"
-          id="serviceDescription"
-          placeholder="Includes shampoo & towel dry"
-        >
-      </div>
-
-      <div class="mb-3">
-
-        <label for="servicePrice" class="form-label">
-          Price
-        </label>
-
-        <input
-          type="number"
-          class="form-control"
-          id="servicePrice"
-          placeholder="10.00"
-        >
-      </div>
-
-      <button type="submit" class="btn btn-primary">
-        Register
-      </button>
-
-      <button type="reset" class="btn btn-secondary">
-        Cancel
-      </button>
-    </form>
-  </main>
-  
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="scripts/services.js"></script>
 
 
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- ================================
+         Navigation
+         ================================ -->
+
+    <nav class="navbar navbar-expand-lg">
+
+        <div class="container">
+
+
+            <a
+                class="navbar-brand"
+                href="index.html"
+            >
+                Sonoran Luxury Pet Spa
+            </a>
+
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div
+                class="collapse navbar-collapse"
+                id="navbarSupportedContent"
+            >
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="index.html"
+                        >
+                            Home
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link active"
+                            href="services.html"
+                        >
+                            Services
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="registration.html"
+                        >
+                            Registration
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="gallery.html"
+                        >
+                            Gallery
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="about.html"
+                        >
+                            About the Owner
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item ms-lg-3">
+
+                        <button
+                            id="darkModeBtn"
+                            class="btn btn-dark"
+                        >
+                            Dark Mode 🌙
+                        </button>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================================
+         Services Hero
+         ================================ -->
+
+    <header class="services-hero">
+
+        <div class="container">
+
+            <div class="services-hero-layout">
+
+
+                <!-- Left Image -->
+
+                <div class="services-hero-image">
+
+                    <img
+                        src="images/cat6.jpg"
+                        alt="Cat at Sonoran Luxury Pet Spa"
+                    >
+
+                </div>
+
+
+                <!-- Center Text -->
+
+                <div class="services-hero-content">
+
+                    <p class="section-label">
+                        SONORAN PET CARE
+                    </p>
+
+                    <h1>
+                        Our Services
+                    </h1>
+
+                    <p>
+                        Professional care designed to keep your
+                        pet clean, comfortable, and happy.
+                    </p>
+
+                </div>
+
+
+                <!-- Right Image -->
+
+                <div class="services-hero-image">
+
+                    <img
+                        src="images/dog5.jpg"
+                        alt="Dog at Sonoran Luxury Pet Spa"
+                    >
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================================
+         Featured Services
+         ================================ -->
+
+    <main class="services-section">
+
+        <div class="container">
+
+
+            <p class="section-label text-center">
+                FEATURED SERVICES
+            </p>
+
+
+            <h2 class="services-title">
+                Care for every kind of visit.
+            </h2>
+
+
+            <div class="row g-4">
+
+
+                <!-- Basic Shampoo -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="service-card">
+
+                        <div class="service-icon">
+                            🛁
+                        </div>
+
+                        <h3>
+                            Basic Shampoo
+                        </h3>
+
+                        <p>
+                            A refreshing shampoo and wash
+                            to keep your pet clean and
+                            comfortable.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Grooming -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="service-card">
+
+                        <div class="service-icon">
+                            ✂️
+                        </div>
+
+                        <h3>
+                            Grooming
+                        </h3>
+
+                        <p>
+                            Professional grooming tailored
+                            to your pet's coat and individual
+                            needs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Nail Trim -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="service-card">
+
+                        <div class="service-icon">
+                            🐾
+                        </div>
+
+                        <h3>
+                            Nail Trim
+                        </h3>
+
+                        <p>
+                            Careful nail trimming and filing
+                            to keep your pet comfortable.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Walk -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="service-card">
+
+                        <div class="service-icon">
+                            🦮
+                        </div>
+
+                        <h3>
+                            Walk
+                        </h3>
+
+                        <p>
+                            A relaxing walk that gives your
+                            pet exercise, attention, and
+                            fresh air.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ================================
+         Add a Service
+         ================================ -->
+
+    <section class="service-form-section">
+
+        <div class="add-service-layout">
+
+
+            <!-- Snake - Full Screen Left -->
+
+            <div class="add-service-side-image">
+
+                <img
+                    src="images/snake1.jpg"
+                    alt="Snake at Sonoran Luxury Pet Spa"
+                >
+
+            </div>
+
+
+            <!-- Add a Service Form -->
+
+            <div class="service-form-card">
+
+
+                <p class="section-label">
+                    SERVICE REGISTRATION
+                </p>
+
+
+                <h2>
+                    Add a Service
+                </h2>
+
+
+                <p class="form-description">
+                    Enter the service information below.
+                </p>
+
+
+                <form id="serviceForm">
+
+
+                    <!-- Service Name -->
+
+                    <div class="mb-3">
+
+                        <label
+                            for="serviceName"
+                            class="form-label"
+                        >
+                            Service Name
+                        </label>
+
+
+                        <input
+                            id="serviceName"
+                            class="form-control"
+                            type="text"
+                            placeholder="Basic Shampoo"
+                        >
+
+                    </div>
+
+
+                    <!-- Service Description -->
+
+                    <div class="mb-3">
+
+                        <label
+                            for="serviceDescription"
+                            class="form-label"
+                        >
+                            Description
+                        </label>
+
+
+                        <input
+                            id="serviceDescription"
+                            class="form-control"
+                            type="text"
+                            placeholder="Shampoo and wash"
+                        >
+
+                    </div>
+
+
+                    <!-- Service Price -->
+
+                    <div class="mb-4">
+
+                        <label
+                            for="servicePrice"
+                            class="form-label"
+                        >
+                            Price
+                        </label>
+
+
+                        <input
+                            id="servicePrice"
+                            class="form-control"
+                            type="number"
+                            min="0"
+                            step="0.01"
+                            placeholder="25.00"
+                        >
+
+                    </div>
+
+
+                    <!-- Register Button -->
+
+                    <button
+                        type="submit"
+                        class="btn register-service-btn"
+                    >
+                        Add Service
+                    </button>
+
+
+                </form>
+
+            </div>
+
+
+            <!-- Lizard - Full Screen Right -->
+
+            <div class="add-service-side-image">
+
+                <img
+                    src="images/lizard2.jpg"
+                    alt="Lizard at Sonoran Luxury Pet Spa"
+                >
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================
+         Registered Services
+         ================================ -->
+
+    <section class="registered-services-section">
+
+        <div class="container">
+
+
+            <!-- Registered Services Header -->
+
+            <div class="registered-services-layout">
+
+
+                <!-- Left Image -->
+
+                <div class="registered-services-image">
+
+                    <img
+                        src="images/dog6.jpg"
+                        alt="Dog at Sonoran Luxury Pet Spa"
+                    >
+
+                </div>
+
+
+                <!-- Center Heading -->
+
+                <div class="registered-services-heading">
+
+                    <p class="section-label">
+                        SAVED SERVICES
+                    </p>
+
+                    <h2 class="registered-title">
+                        Registered Services
+                    </h2>
+
+                </div>
+
+
+                <!-- Right Image -->
+
+                <div class="registered-services-image">
+
+                    <img
+                        src="images/hamster1.jpg"
+                        alt="Hamster at Sonoran Luxury Pet Spa"
+                    >
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Services added with JavaScript -->
+
+            <div id="serviceList">
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================
+         Footer
+         ================================ -->
+
+    <footer>
+
+        <div class="container">
+
+            <h3>
+                Sonoran Luxury Pet Spa
+            </h3>
+
+            <p>
+                Scottsdale, Arizona
+            </p>
+
+            <p class="copyright">
+                &copy; 2026 Sonoran Luxury Pet Spa
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ================================
+         jQuery
+         ================================ -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+    <!-- ================================
+         Bootstrap
+         ================================ -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- ================================
+         Services JavaScript
+         ================================ -->
+
+    <script src="scripts/services.js"></script>
+
+
 </body>
+
 </html>
